@@ -1,130 +1,255 @@
+
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<meta name="description" content="A blazing-fast Single Page Application engine">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Senna.js">
+<meta property="og:description" content="A blazing-fast Single Page Application engine">
+<meta property="og:image" content="https://sennajs.com/images/site_screenshot.jpg">
+<title>Senna.js | Introduction</title>
+<!-- build:css styles/all.min.css -->
+<link rel="stylesheet" href="./vendor/pure/pure-min.css">
+<link rel="stylesheet" href="./vendor/pure/grids-responsive-min.css">
+<link rel="stylesheet" href="./styles/main.css">
+<link rel="stylesheet" href="./styles/examples.css">
+<link rel="stylesheet" href="./styles/team.css">
+<link rel="stylesheet" href="./vendor/senna/build/senna.css">
+<!-- endbuild -->
+<link rel="shortcut icon" href="./images/favicon.ico">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300">
+</head>
+<body id="body">
+<div class="senna-loading-bar">
+</div>
+<div class="header">
+<div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+<div class="center">
+<a class="pure-menu-heading" href="./">
+<span>Senna.js</span>
+</a>
+<ul class="menu-section">
+<li class="pure-menu-selected">
+<a href="./">Home</a>
+</li>
+<li class="">
+<a href="./docs/">Docs</a>
+</li><li class="">
+<a href="./about/">About</a>
+</li>
+<li>
+<a class="classy-link" href="https://sennajs.com/api/" target="_blank" data-senna-off="">
+<span>API</span>
+</a>
+</li>
+<li>
+<a class="classy-link" href="https://github.com/liferay/senna.js" target="_blank">
+<span>GitHub</span>
+</a>
+</li>
+<li>
+<a class="classy-link" href="https://github.com/liferay/senna.js/archive/master.zip">
+<span>Download</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="splash-container">
+<div class="splash senna-banner-transition-fade animated">
+<h1 class="splash-head">
+<img src="images/logo.png" alt="Senna.js Logo" height="256">
+</h1>
+<p class="splash-subhead">A blazing-fast Single Page Application engine</p>
+<p class="gh-btns">
+<iframe src="https://ghbtns.com/github-btn.html?user=liferay&amp;repo=senna.js&amp;type=watch&amp;count=true&amp;size=large" allowtransparency="true" frameborder="0" scrolling="0" width="150" height="30">
+</iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=liferay&amp;repo=senna.js&amp;type=fork&amp;count=true&amp;size=large" allowtransparency="true" frameborder="0" scrolling="0" width="150" height="30">
+</iframe>
+</p>
+</div>
+</div>
+<div class="content-wrapper">
+<div class="content center">
+<div class="bower-ad is-center">npm install senna</div>
+<h2 class="content-head is-center">Features</h2>
+<p class="is-center">Senna.js is a blazing-fast single page application engine that provides several low-level APIs that allows you to build modern web-based applications with only ~8KB of JavaScript without any dependency.</p>
+<div class="pure-g feature-item">
+<div class="pure-u-1 pure-u-md-1-8">
+</div>
+<div class="feature-image-col pure-u-1 pure-u-md-3-8">
+<img src="images/feature-seo.gif" style="padding-top: 25px;" alt="Bookmarkability &amp; SEO">
+</div>
+<div class="pure-u-1 pure-u-md-3-8 l-box">
+<h3 class="content-subhead">Bookmarkability & SEO</h3>
+<p>When using a single page app, sending a link to a friend should get them where we were. More than that, a search engine spider should be able to index that same content.
+</p>
+</div>
+<div class="pure-u-1 pure-u-md-1-8">
+</div>
+</div>
+<div class="pure-g feature-item">
+<div class="pure-u-1 pure-u-md-1-8">
+</div>
+<div class="pure-u-1 pure-u-md-3-8 l-box">
+<h3 class="content-subhead">History Navigation</h3>
+<p>Forget hashbangs (#!), by using HTML5's History API we can manipulate the user's browser session history in JavaScript using pushState, replaceState and the popstate event. That way you can use browser's back/forward buttons again.</p>
+</div>
+<div class="feature-image-col pure-u-1 pure-u-md-3-8">
+<img src="images/feature-history.gif" style="padding-top: 45px;" alt="History Navigation"></div>
+<div class="pure-u-1 pure-u-md-1-8">
+</div>
+</div>
+<div class="pure-g feature-item">
+<div class="pure-u-1 pure-u-md-1-8">
+</div>
+<div class="feature-image-col pure-u-1 pure-u-md-3-8">
+<img src="images/feature-feedback.gif" style="padding-top: 25px;" alt="UI Feedback &amp; Transitions">
+</div>
+<div class="pure-u-1 pure-u-md-3-8 l-box">
+<h3 class="content-subhead">UI Feedback & Transitions</h3>
+<p>When some content is requested, it indicates to the user that something is happening. You can also define different kinds of CSS animations to use during state transitions.</p>
+</div>
+<div class="pure-u-1 pure-u-md-1-8">
+</div>
+</div>
+<div class="pure-g feature-item">
+<div class="pure-u-1 pure-u-md-1-8">
+</div>
+<div class="pure-u-1 pure-u-md-3-8 l-box">
+<h3 class="content-subhead">Cacheable Screens</h3>
+<p>Once you load a certain surface this content can be cached in memory and be retrieved later on without any additional request.</p>
+</div>
+<div class="feature-image-col pure-u-1 pure-u-md-3-8">
+<img src="images/feature-cacheable.gif" alt="Cacheable Screens">
+</div>
+<div class="pure-u-1 pure-u-md-1-8">
+</div>
+</div>
+</div>
+<div class="content center">
+<h2 class="content-head is-center">Examples</h2>
+<p class="is-center">Check out the examples below to see how Senna.js can speed up your static HTML site with few lines of code.</p>
+<div class="grid">
+<div class="pure-g">
+<div class="example-item pure-u-1 pure-u-md-1-3">
+<figure class="effect">
+<img src="images/demo.jpg" alt="Email">
+<figcaption>
+<h2>Email 
+<span>Example
+</span>
+</h2>
+<p>Enable Single Page Apps using only HTML5 data-attributes
+</p>
+<a href="examples/email" data-senna-off="">View more
+</a>
+</figcaption>
+</figure>
+</div>
+<div class="example-item pure-u-1 pure-u-md-1-3">
+<figure class="effect">
+<img src="images/demo.jpg" alt="Gallery">
+<figcaption>
+<h2>Gallery 
+<span>Example
+</span>
+</h2>
+<p>Carousel app with history support and cacheable screens
+</p>
+<a href="examples/gallery" data-senna-off="">View more
+</a>
+</figcaption>
+</figure>
+</div>
+<div class="example-item pure-u-1 pure-u-md-1-3">
+<figure class="effect">
+<img src="images/demo.jpg" alt="Blog">
+<figcaption>
+<h2>Blog 
+<span>Example
+</span>
+</h2>
+<p>Infinite scrolling pages done right with history support
+</p>
+<a href="examples/blog" data-senna-off="">View more
+</a>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="team-section content">
+<div class="center">
+<h2 class="content-head is-center">Team
+</h2>
+<p class="team-section-desc is-center">Made with 
+<span class="love">♥
+</span> 
+by these guys and a bunch of 
+<a href="https://github.com/liferay/senna.js/graphs/contributors">
+awesome contributors
+</a>
+</p>
+<div class="pure-g">
+<div class="pure-u-1 pure-u-md-2-24">
+</div>
+<div class="pure-u-1 pure-u-md-5-24 team-member">
+<a href="https://github.com/eduardolundgren">
+<img width="104" height="104" class="team-member-photo" src="https://2.gravatar.com/avatar/42327de520e674a6d1686845b30778d0?size=200" alt="Eduardo Lundgren">
+<span class="team-member-title">Eduardo Lundgren
+</span>
+</a>
+</div>
+<div class="pure-u-1 pure-u-md-5-24 team-member">
+<a href="https://github.com/ipeychev">
+<img width="104" height="104" class="team-member-photo" src="https://2.gravatar.com/avatar/c2a0cb9ed0d19196b7fe061055c18838?size=200" alt="Iliyan Peychev">
+<span class="team-member-title">Iliyan Peychev
+</span>
+</a>
+</div>
+<div class="pure-u-1 pure-u-md-5-24 team-member">
+<a href="https://github.com/pmarquees">
+<img width="104" height="104" class="team-member-photo" src="https://2.gravatar.com/avatar/1cf95bc9cee05a0bba25f7529bcdb888?size=200" alt="Pedro Marques">
+<span class="team-member-title">Pedro Marques
+</span>
+</a>
+</div>
+<div class="pure-u-1 pure-u-md-5-24 team-member">
+<a href="https://github.com/zenorocha">
+<img width="104" height="104" class="team-member-photo" src="https://2.gravatar.com/avatar/e190023b66e2b8aa73a842b106920c93?size=200" alt="Zeno Rocha">
+<span class="team-member-title">Zeno Rocha
+</span>
+</a>
+</div>
+<div class="pure-u-1 pure-u-md-2-24">
+</div>
+</div>
+<p class="is-center">Brought to you by<a class="liferay-logo" href="http://liferay.com/">
+<img src="images/liferay-logo.png" alt="Liferay Logo">
+</a>
+</p>
+</div>
+</div>
+</div>
+<!-- build:js scripts/all.min.js -->
+<script src="./vendor/senna/build/globals/senna-min.js">
+</script>
+<script src="./scripts/main.js">
+</script>
+<!-- endbuild -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  <title>Blog － A Single Page App demo using Senna.js</title>
-
-  <!-- Demo -->
-  <link rel="shortcut icon" href="http://sennajs.com/images/favicon.ico">
-  <link rel="stylesheet" href="../../bower_components/pure/pure-min.css">
-  <link rel="stylesheet" href="../../bower_components/pure/grids-responsive-min.css">
-  <link rel="stylesheet" href="css/blog.css"></head>
-  <link rel="stylesheet" href="css/spa.css"></head>
-
-  <!-- Using Senna's optional style -->
-  <link rel="stylesheet" href="../../build/senna.css">
-
-  <!-- Including Senna -->
-  <script src="../../build/globals/senna-debug.js"></script>
-
-  <!-- Initializing Senna -->
-  <script src="js/spa.js"></script>
-<body>
-  <div class="senna-loading-bar"></div>
-
-  <div id="layout" class="pure-g">
-    <div class="sidebar pure-u-1 pure-u-md-1-4">
-      <div class="header">
-        <h1 class="brand-title">Blog</h1>
-        <h2 class="brand-tagline">A Single Page App<br>demo using Senna.js</h2>
-      </div>
-    </div>
-
-    <div class="content pure-u-1 pure-u-md-3-4">
-      <div>
-        <!-- A wrapper for all the blog posts -->
-        <div id="posts">
-          <script>
-            window.nextPage = '/examples/blog/page02.html';
-          </script>
-
-          <h1 class="content-subhead">Pinned Post</h1>
-
-          <!-- A single blog post -->
-          <section class="post">
-            <header class="post-header">
-              <img class="post-avatar" alt="Zeno Rocha's avatar" height="48" width="48" src="../common/img/zeno.jpg">
-
-              <h2 class="post-title">Introducing Senna.js</h2>
-
-              <p class="post-meta">
-                By <a href="#" class="post-author">Zeno Rocha</a> under <a class="post-category post-category-design" href="#">SPA</a>
-              </p>
-            </header>
-
-            <div class="post-description">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis omnis provident dolores praesentium eligendi accusantium voluptatum totam necessitatibus. Nisi asperiores molestiae ex, quaerat dolorum iure repellendus reprehenderit aliquid, minus libero rem aperiam fugit voluptatum. Esse, ex. Id aliquid culpa a.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis omnis provident dolores praesentium eligendi accusantium voluptatum totam necessitatibus. Nisi asperiores molestiae ex, quaerat dolorum iure repellendus reprehenderit aliquid, minus libero rem aperiam fugit voluptatum. Esse, ex. Id aliquid culpa a.
-              </p>
-            </div>
-          </section>
-
-          <section class="post">
-            <header class="post-header">
-              <img class="post-avatar" alt="Eduardo Lundgren's avatar" height="48" width="48" src="../common/img/dudu.jpg">
-
-              <h2 class="post-title">What I learned at BrazilJS Conf</h2>
-
-              <p class="post-meta">
-                By <a class="post-author" href="#">Eduardo Lundgren</a> under <a class="post-category post-category-js" href="#">Events</a>
-              </p>
-            </header>
-
-            <div class="post-description">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              </p>
-            </div>
-          </section>
-
-          <section class="post">
-            <header class="post-header">
-              <img class="post-avatar" alt="Pedro Marques's avatar" height="48" width="48" src="../common/img/jamal.jpg">
-
-              <h2 class="post-title">Slumdog Millionaire movie review</h2>
-
-              <p class="post-meta">
-                By <a class="post-author" href="#">Pedro Marques</a> under <a class="post-category post-category-pure" href="#">Movies</a>
-              </p>
-            </header>
-
-            <div class="post-description">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              </p>
-            </div>
-          </section>
-
-          <section class="post">
-            <header class="post-header">
-              <img class="post-avatar" alt="Henrique Vicente's avatar" height="48" width="48" src="../common/img/henvic.jpg">
-
-              <h2 class="post-title">Kitties, kitties, kitties...</h2>
-
-              <p class="post-meta">
-                By <a class="post-author" href="#">Henrique Vicente</a> under <a class="post-category post-category-yui" href="#">Cute</a>
-              </p>
-            </header>
-
-            <div class="post-description">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus eius ullam pariatur nemo provident quo vitae fugiat tempore, nam beatae, quisquam voluptatum aperiam sit ipsa culpa nulla hic autem! Deleniti, minus, deserunt? Adipisci architecto, dolorem.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus eius ullam pariatur nemo provident quo vitae fugiat tempore, nam beatae, quisquam voluptatum aperiam sit ipsa culpa nulla hic autem! Deleniti, minus, deserunt? Adipisci architecto, dolorem.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem minima architecto et necessitatibus cum ullam consequatur nisi itaque a obcaecati! Doloremque necessitatibus sed repudiandae qui consequatur culpa laudantium doloribus harum consectetur porro ipsa, quasi, quis, hic adipisci eius id perferendis!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem minima architecto et necessitatibus cum ullam consequatur nisi itaque a obcaecati! Doloremque necessitatibus sed repudiandae qui consequatur culpa laudantium doloribus harum consectetur porro ipsa, quasi, quis, hic adipisci eius id perferendis!
-              </p>
-            </div>
-          </section>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
-</html>
+      ga('create', 'UA-4114546-43', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body></html>
